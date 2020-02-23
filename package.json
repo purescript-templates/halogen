@@ -1,0 +1,8 @@
+{
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "purescript": "^0.13.6",
+    "spago": "^0.14.0"
+  }
+}
