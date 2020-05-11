@@ -3,6 +3,11 @@
   "devDependencies": {
     "parcel": "^1.12.4",
     "purescript": "^0.13.6",
-    "spago": "^0.14.0"
+    "spago": "^0.15.2"
+  },
+  "scripts": {
+    "build": "spago build",
+    "serve": "parcel dev/index.html --out-dir dev-dist --open",
+    "build-prod": "rm -rf dist && spago bundle-app --to prod/index.js && parcel build prod/index.html"
   }
 }
