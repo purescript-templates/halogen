@@ -3,8 +3,8 @@
 git clone --depth 1 https://github.com/purescript-templates/halogen.git myApp
 cd myApp
 npm install -g purescript spago parcel
-spago build
-parcel src/index.html --open
+npm run build
+npm run serve
 ```
 
 ### Introduction
@@ -32,25 +32,23 @@ npm install -g purescript spago parcel
 ```
 Initial compilation:
 ```
-spago build
+npm run build
 ```
 Launch webapp:
 ```
-parcel dev/index.html --out-dir dev-dist --open
+npm run serve
 ```
 
 ### Development Cycle
-If you're using an [editor](https://github.com/purescript/documentation/blob/master/ecosystem/Editor-and-tool-support.md#editors) that supports [`purs ide`](https://github.com/purescript/purescript/tree/master/psc-ide) or are running [`pscid`](https://github.com/kRITZCREEK/pscid), you simply need to keep the previous `parcel` command running in a terminal. Any save to a file will trigger an incremental recompilation, rebundle, and web page refresh, so you can immediately see your changes.
+If you're using an [editor](https://github.com/purescript/documentation/blob/master/ecosystem/Editor-and-tool-support.md#editors) that supports [`purs ide`](https://github.com/purescript/purescript/tree/master/psc-ide) or are running [`pscid`](https://github.com/kRITZCREEK/pscid), you simply need to keep the previous `npm run serve` command running in a terminal. Any save to a file will trigger an incremental recompilation, rebundle, and web page refresh, so you can immediately see your changes.
 
-If your workflow does not support automatic recompilation, or if you add, remove, or modify module names, then you will need to manually re-run `spago build`.
+If your workflow does not support automatic recompilation, or if you add, remove, or modify module names, then you will need to manually re-run `npm run build`.
 
 ### Production
 
-When you are ready to create a minified bundle for deployment, run the following commands:
+When you are ready to create a minified bundle for deployment, run the following command:
 ```
-spago bundle-app --to prod/index.js
-rm -r dist
-parcel build prod/index.html
+npm run build-prod
 ```
 
 Parcel output appears in the `./dist/` directory.
