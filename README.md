@@ -1,6 +1,6 @@
 ### Quick Start
 ```
-git clone --depth 1 https://github.com/purescript-templates/halogen.git myApp
+git clone https://github.com/purescript-templates/halogen.git myApp
 cd myApp
 npm install -g purescript spago parcel
 npm run build
